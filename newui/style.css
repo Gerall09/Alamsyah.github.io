@@ -655,17 +655,16 @@ span
         background: var(--bg-color);
       }
 
-      .our-skills {
-        position: fixed;
-          padding: 15px;
-          width: 325px;
-          align-items: center;
-          border-radius: 10px;
-          box-shadow: 5px 5px 10px var(--main-after),
-              inset 5px 5px 10px var(--shadow-after),
-              inset -5px -5px 10px var(--main-color),
-              -5px -5px 10px var(--shadow-color);
-      }
+	.our-skills {
+	position: 0%;
+	padding: 15px;
+	width: 325px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
+		inset 5px 5px 10px rgba(255, 255, 255, 0.08),
+		inset -5px -5px 10px rgba(0, 0, 0, 0.4),
+		-5px -5px 10px rgba(255, 255, 255, 0.08);
+	}
       
       .our-skills .skill {
           margin: 40px 10px;
