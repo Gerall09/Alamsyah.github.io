@@ -656,7 +656,7 @@ span
       }
 
       .our-skills {
-        position: relative;
+        position: fixed;
           padding: 15px;
           width: 325px;
           left: 0;
