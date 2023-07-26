@@ -999,11 +999,11 @@ span
   font-size: 5rem;
 }
 
-.home-img 
+.home .home-img 
 {
   width: 70vw;
   margin-top: 4rem;
-  margin-left: -20%;
+  margin-left: 0%;
 }
 
 .about
