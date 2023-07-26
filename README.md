@@ -1387,7 +1387,6 @@ span
 {
   width: 70vw;
   margin-top: 4rem;
-  margin-left: 25rem;
 }
 
 .about
