@@ -236,6 +236,7 @@ span
 .home
 {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -999,11 +1000,11 @@ span
   font-size: 5rem;
 }
 
-.home .home-img 
+.home-img 
 {
   width: 70vw;
   margin-top: 4rem;
-  margin-left: 0%;
+  margin-left: 25rem;
 }
 
 .about
@@ -1013,7 +1014,7 @@ span
 
 .about img{
   width : 70vw;
-  top: 2rem;
+  margin-top: 4rem;
 }
 
 .services h2
@@ -1038,25 +1039,10 @@ span
 
 }
 
-@media (max-width: 720px) {
-  .home-img 
-{
-  width: 70vw;
-  margin-top: 4rem;
-}
-}
-
 @media (max-width: 617px) {
   .portfolio-container {
     grid-template-columns: 1fr;
   }
-
-	.home-img 
-{
-  width: 70vw;
-  margin-top: 4rem;
-  margin-left: 1rem;
-}
 }
 
 @media (max-width: 450px)
@@ -1072,7 +1058,8 @@ span
 }
 
 @media (max-width: 450px){
-
+  .home-img img {
+    width: 90vw;
   }
   
   .about-img img {
