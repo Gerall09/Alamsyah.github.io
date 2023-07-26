@@ -1039,6 +1039,14 @@ span
 
 }
 
+@media (max-width: 720px) {
+  .home-img 
+{
+  width: 70vw;
+  margin-top: 4rem;
+}
+}
+
 @media (max-width: 617px) {
   .portfolio-container {
     grid-template-columns: 1fr;
@@ -1065,9 +1073,7 @@ span
 }
 
 @media (max-width: 450px){
-  .home-img img {
-    width: 90vw;
-	  left: 1px;
+
   }
   
   .about-img img {
