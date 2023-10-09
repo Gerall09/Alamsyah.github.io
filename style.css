@@ -94,6 +94,10 @@ body
   transition: .3s;
 }
 
+.navbar.active {
+	display: block;
+}
+
 .navbar a:hover{
   color: var(--second-bg-color);
 }
