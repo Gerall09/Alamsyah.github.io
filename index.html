@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./navbar.js"></script>
+    
     <title>Document</title>
                   <!--URL_ONLY-->
                   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -22,20 +22,22 @@
 </head>
 <body>
 
-  <header class="header">
-<a href="#" class="logo"> Alamsyah </a>
-<i class="bx bx-menu" id="menu-icon"></i>
-<nav class="navbar">
-  <a href="#home">Beranda</a>
-  <a href="#about">Tentang</a>
-  <a href="#service">Layanan</a>
-  <a href="#gallery">Gambar</a>
-  <a href="webs">Webs</a>
-  <a href="contact">Contact</a>
-</nav>
 
-</header>
-    
+    <nav class="navbar">
+      <div class="logo">alamsyah</div>
+      <ul class="nav-links">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Portofolio</a></li>
+          <li><a href="#work">Gallery</a></li>
+          <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+  </nav>
+
 
     <section id="home" class="home">
         <div class="home-bg"></div>
@@ -270,11 +272,20 @@
 <p> Copyright & copy; 2023 by Yu:3 | All Right Reserved.| </p>
 </div>
 </footer>
+<!-- navbar -->       
+</body>
 
 <!-- javascript -->
 <!-- pushname --> <script src="./pushNama.js"></script>
 <!-- br -->
-<!-- navbar -->   <script src="./navbar.js"></script>
+
 <!--  -->
+<script>const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  });
+  </script>
 
 </html>
