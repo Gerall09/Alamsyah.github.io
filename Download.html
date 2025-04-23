@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloader Lagu YouTube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      width: 300px;
+    }
+    #download-section {
+      display: none;
+      margin-top: 20px;
+    }
+    a.download-link {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Downloader Lagu YouTube</h1>
+  <input type="text" id="youtube-url" placeholder="Masukkan URL YouTube" />
+  <button onclick="getDownloadLink()">Download Lagu</button>
+  <div id="download-section">
+    <p>Link download siap:</p>
+    <a id="download-link" class="download-link" target="_blank">Download MP3</a>
+  </div>
+
+  <script>
+    async function getDownloadLink() {
+      const urlInput = document.getElementById("youtube-url").value;
+      const apiKey = "l93OhQDu";
+      const apiUrl = `https://api.botcahx.eu.org/api/dowloader/yt?url=${encodeURIComponent(urlInput)}&apikey=${apiKey}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.status && data.result?.music) {
+          const musicUrl = data.result.music;
+          document.getElementById("download-link").href = musicUrl;
+          document.getElementById("download-section").style.display = "block";
+        } else {
+          alert("Gagal mendapatkan link download. Pastikan URL valid.");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Terjadi kesalahan saat memproses permintaan.");
+      }
+    }
+  </script>
+</body>
+</html>
